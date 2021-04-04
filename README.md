@@ -40,6 +40,7 @@ Open Azure Cloud Bash Shell and type the below Command to verify
 terraform -version
 ```
 
+![alt text](https://github.com/pkdasgupta/solanasre-proj/blob/main/app-ss/tfonconsole.jpg?raw=true)
 
 Use [This Guide](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret) to have Terraform Authenticated to access your preferred subscription using a Service Principal with a Client Secret.
 
@@ -64,6 +65,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Acknowledgments
 
-* **Joe Abanto** [Email](joe@solana.com)
+* **Joe Abanto** [Email](mailto:joe@solana.com)
 
 
