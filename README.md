@@ -59,7 +59,7 @@ Use [This Guide](https://registry.terraform.io/providers/hashicorp/azurerm/lates
 - Run the app with ```python index.html```
 - Upon successful setup and execution, you would see the below while hitting app url for loadbalancer Public IP.
 
-![app-ss](https://github.com/pkdasgupta/solanasre-proj/blob/main/infra-arch/app-ss.JPG)
+![app-ss](https://github.com/pkdasgupta/solanasre-proj/blob/main/app-ss/app-ss.jpg)
 
 ### Using Terraform Config files (tf-files) to Provision the necessary Infra
 
