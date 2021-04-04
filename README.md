@@ -47,21 +47,21 @@ Use [This Guide](https://registry.terraform.io/providers/hashicorp/azurerm/lates
 
 ### Configuring Azure VM for Golden Image
 
-- Create an Azure Linux VM with Python3 pre-installed
+- Create an [Azure Linux VM](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-cli#create-virtual-machine) with Python3 pre-installed 
 - Clone the Repository conataining application code :  https://github.com/joeaba/solana-sre
 - Install necessary python modules : Flask, MySQL Connector
 - Open Port 5000 on the VM to access the app url.
 
 ### Configuring Azure MySQL Database initialized with Custom Data provided
 
-- Create an Azure MySQL Database
-- Execute the provided SQL Script : ```hello_world.sql``` to initialize the database
+- Create an [Azure MySQL Database](https://docs.microsoft.com/en-us/azure/mysql/quickstart-create-mysql-server-database-using-azure-cli)
+- Execute the provided SQL Script on the server : ```hello_world.sql``` to initialize the database
 - Run the app with ```python index.html```
 - Upon successful setup and execution, you would see the below while hitting app url.
 
 ### Using Terraform Config files (tf-files) to Provision the necessary Infra
 
-- Create an image of the VM prepared above to be used as Golden image for VM scalesets.
+- Create an [image of the VM](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-custom-images) prepared above to be used as Golden image for VM scalesets.
 - Switch to tf-code directory and run the below for infra provisoning :
 
 ```
@@ -70,7 +70,7 @@ $ terraform init
 $ terraform plan 
 ```
 
-- Import the database using command mentioned in tf-code/tfcmds
+- Import the database using command mentioned in [tf-code/tfcmds](https://github.com/pkdasgupta/solanasre-proj/blob/main/tf-code/tfcmds)
 
 - Finally, Run the below to provision the infra
 
@@ -79,6 +79,8 @@ $ terraform plan -out=solana-plan
 
 $ terraform apply solana-plan
 ``` 
+
+[!infra-diag](https://github.com/pkdasgupta/solanasre-proj/blob/main/infra-arch/solana-sre-archdiag.JPG)
 
 ## Versioning
 
