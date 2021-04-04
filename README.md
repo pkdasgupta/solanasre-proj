@@ -22,7 +22,7 @@
 * **app-ss** : Directory containing Screenshots from Running Application
 
 
-## Step-by-Step Setup Guidelines
+## Step-by-Step Setup Guide
 
 ### Pre-requisites
 
@@ -32,9 +32,17 @@
 
 ### Configuring Terraform on Azure
 
+The easiest way to get onboarded to Terraform on Azure is via Azure Cloud Shell which has Terraform pre-installed. Terraform uses the ```azurerm provider``` to connect to Azure.
+
+Open Azure Cloud Bash Shell and type the below Command to verify
+
 ```
-Give the example
+terraform -version
 ```
+
+
+Use [This Guide](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret) to have Terraform Authenticated to access your preferred subscription using a Service Principal with a Client Secret.
+
 
 ### Configuring Azure VM for Golden Image
 
