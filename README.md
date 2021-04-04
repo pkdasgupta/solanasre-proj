@@ -15,11 +15,11 @@
 
 ## Repo Directory Structure
 
-* tf-code : Directory Conatining Terraform Code (IaaC) to provision and configure Azure cloud Infra
+* **tf-code** : Directory Conatining Terraform Code (IaaC) to provision and configure Azure cloud Infra
 
-* infra-arch : Infrastructure Architecture Diagram detailing Tools and Methodologies used
+* **infra-arch** : Infrastructure Architecture Diagram detailing Tools and Methodologies used
 
-* app-ss : Directory containing Screenshots from Running Application
+* **app-ss** : Directory containing Screenshots from Running Application
 
 
 ## Step-by-Step Setup Guidelines
@@ -30,41 +30,19 @@
 * Azure CLI
 * [Terraform on Azure](https://docs.microsoft.com/en-us/azure/developer/terraform/)
 
+### Configuring Terraform on Azure
+
 ```
 Give the example
 ```
 
-And repeat
+### Configuring Azure VM for Golden Image
 
-```
-until finished
-```
 
-End with an example of getting some data out of the system or using it for a little demo
+### Configuring Azure MySQL Database initialized with Custom Data provided
 
-## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+### Using Terraform Config files (tf-files) to Provision the necessary Infra
 
 
 ## Versioning
