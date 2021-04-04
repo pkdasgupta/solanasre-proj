@@ -5,24 +5,30 @@
 * Project Instructions : https://github.com/joeaba/solana-sre
 
 
-## Project Notes
+## Infra Details
 
-* IaaC Language Used : Terraform
-* Cloud Service Provider Used : Microsoft Azure
+* IaaC Language Used : [Terraform](https://www.terraform.io/)
+* Cloud Service Provider Used : [Microsoft Azure](https://azure.microsoft.com/en-in/)
+* Application Language : [Python - Flask](https://www.fullstackpython.com/flask.html)
+* Database Used : [Azure Managed MySQL DB](https://azure.microsoft.com/en-in/services/mysql/)
+* Webserver : Auto-Scaled [Azure VM Scalesets](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview) behind Azure Load Balancer
 
-### Prerequisites
+## Repo Directory Structure
 
-What things you need to install the software and how to install them
+* tf-code : Directory Conatining Terraform Code (IaaC) to provision and configure Azure cloud Infra
 
-```
-Give examples
-```
+* infra-arch : Infrastructure Architecture Diagram detailing Tools and Methodologies used
 
-### Installing
+* app-ss : Directory containing Screenshots from Running Application
 
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+## Step-by-Step Setup Guidelines
+
+### Pre-requisites
+
+* [Microsoft Azure Account](https://azure.microsoft.com/en-in/free/)
+* Azure CLI
+* [Terraform on Azure](https://docs.microsoft.com/en-us/azure/developer/terraform/)
 
 ```
 Give the example
@@ -60,33 +66,18 @@ Give an example
 
 Add additional notes about how to deploy this on a live system
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/pkdasgupta/solanasre-proj/tags).
 
-## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+## Author
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **Prasanta Dasgupta** [pkdasgupta](https://pkdasgupta.co.in/)
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* **Joe Abanto** [Email](joe@solana.com)
+
 
