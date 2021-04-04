@@ -32,7 +32,7 @@
 
 ### Configuring Terraform on Azure
 
-The easiest way to get onboarded to Terraform on Azure is via Azure Cloud Shell which has Terraform pre-installed. Terraform uses the ```azurerm provider``` to connect to Azure.
+The easiest way to get onboarded to Terraform on Azure is via [Azure Cloud Shell](https://shell.azure.com/) which has Terraform pre-installed. Terraform uses the ```azurerm provider``` to connect to Azure.
 
 Open Azure Cloud Bash Shell and type the below Command to verify
 
@@ -48,7 +48,7 @@ Use [This Guide](https://registry.terraform.io/providers/hashicorp/azurerm/lates
 ### Configuring Azure VM for Golden Image
 
 - Create an [Azure Linux VM](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-cli#create-virtual-machine) with Python3 pre-installed 
-- Clone the Repository conataining application code :  https://github.com/joeaba/solana-sre
+- Login to the VM and Clone the Repository conataining application code :  https://github.com/joeaba/solana-sre
 - Install necessary python modules : Flask, MySQL Connector
 - Open Port 5000 on the VM to access the app url.
 
@@ -57,28 +57,26 @@ Use [This Guide](https://registry.terraform.io/providers/hashicorp/azurerm/lates
 - Create an [Azure MySQL Database](https://docs.microsoft.com/en-us/azure/mysql/quickstart-create-mysql-server-database-using-azure-cli)
 - Execute the provided SQL Script on the server : ```hello_world.sql``` to initialize the database
 - Run the app with ```python index.html```
-- Upon successful setup and execution, you would see the below while hitting app url.
+- Upon successful setup and execution, you would see the below while hitting app url for loadbalancer Public IP.
+
+![app-ss](https://github.com/pkdasgupta/solanasre-proj/blob/main/infra-arch/app-ss.JPG)
 
 ### Using Terraform Config files (tf-files) to Provision the necessary Infra
 
 - Create an [image of the VM](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-custom-images) prepared above to be used as Golden image for VM scalesets.
+- Provide the resource-id in [tf-code/vmss.tf](https://github.com/pkdasgupta/solanasre-proj/blob/main/tf-code/vmss.tf) for the image created above as Custom image to be used in VM Scalesets.
+- Import the database using command mentioned in [tf-code/tfcmds](https://github.com/pkdasgupta/solanasre-proj/blob/main/tf-code/tfcmds)
 - Switch to tf-code directory and run the below for infra provisoning :
 
 ```
 $ terraform init
 
-$ terraform plan 
-```
-
-- Import the database using command mentioned in [tf-code/tfcmds](https://github.com/pkdasgupta/solanasre-proj/blob/main/tf-code/tfcmds)
-
-- Finally, Run the below to provision the infra
-
-```
 $ terraform plan -out=solana-plan
 
 $ terraform apply solana-plan
 ``` 
+
+- Verify Infra and running application by hitting the Load Balancer Public IP
 
 ![infra-diag](https://github.com/pkdasgupta/solanasre-proj/blob/main/infra-arch/solana-sre-archdiag.JPG)
 
