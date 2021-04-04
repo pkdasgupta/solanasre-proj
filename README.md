@@ -80,7 +80,7 @@ $ terraform plan -out=solana-plan
 $ terraform apply solana-plan
 ``` 
 
-[!infra-diag](https://github.com/pkdasgupta/solanasre-proj/blob/main/infra-arch/solana-sre-archdiag.JPG)
+![infra-diag](https://github.com/pkdasgupta/solanasre-proj/blob/main/infra-arch/solana-sre-archdiag.JPG)
 
 ## Versioning
 
