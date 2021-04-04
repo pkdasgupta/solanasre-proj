@@ -1,0 +1,1 @@
+terraform import azurerm_mysql_server.mysql-server /subscriptions/3492f383-b413-47a2-9f09-697b9602dd46/resourceGroups/pkd-rg/providers/Microsoft.DBforMySQL/servers/pkdmysql
