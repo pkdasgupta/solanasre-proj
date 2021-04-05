@@ -15,11 +15,11 @@
 
 ## Repo Directory Structure
 
-* **tf-code** : Directory Conatining Terraform Code (IaaC) to provision and configure Azure cloud Infra
+* [**tf-code**](https://github.com/pkdasgupta/solanasre-proj/tree/main/tf-code) : Directory Conatining Terraform Code (IaaC) to provision and configure Azure cloud Infra
 
-* **infra-arch** : Infrastructure Architecture Diagram detailing Tools and Methodologies used
+* [**infra-arch**](https://github.com/pkdasgupta/solanasre-proj/tree/main/infra-arch) : Infrastructure Architecture Diagram detailing Tools and Methodologies used
 
-* **app-ss** : Directory containing Screenshots from Running Application
+* [**app-ss**](https://github.com/pkdasgupta/solanasre-proj/tree/main/app-ss) : Directory containing Screenshots from Running Application
 
 
 ## Step-by-Step Setup Guide
